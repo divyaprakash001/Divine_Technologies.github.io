@@ -23,6 +23,9 @@
           animation: {
             'slow-bounce': 'bounce 1s infinite',
           },
+          backgroundImage: {
+            'gradient-custom': 'linear-gradient(313deg, #ef4949, #dd4747, #0583d8, #0575c1)',
+          },
           keyframes: {
             bounce: {
               '0%, 100%': { transform: 'translateY(0)' },
@@ -43,6 +46,29 @@
 </head>
 
 <body class="overflow-x-hidden">
+
+  <header
+    class="max-w-full max-h-[120px] h-[80px] bg-white flex grid-cols-2 px-10 py-2 justify-between lg:gap-6 sm:gap-4 items-center">
+    <div class="basis-[15%] xs:basis-[35%] sm:basis-[20%] md:basis-[11%] ">
+      <a href="index.html"><img src="assets/images/divine tech logo.png" alt="Logo"></a>
+    </div>
+    <div class=" md:basis-[70%] lg:basis-[60%]   font-semibold text-xl ">
+      <nav class="cursor-pointer">
+        <ul class="xs:hidden sm:hidden md:flex flex justify-evenly items-center py-4">
+          <li class=""><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-bars float-right fa-2xl xs:text-4xl  md:hidden"></i>
+      </nav>
+    </div>
+  </header>
+
+
+
+
   <section class="max-w-full bg-[url('assets/images/bg.jpg')] object-cover bg-center bg-cover relative">
     <div class="w-[100%] backdrop-blur-none h-[100%] absolute left-0 top-0  z-0"></div>
     <div class="flex justify-center items-center mx-auto h-[550px] xs:h-[500px] max-h-[600px]">
@@ -134,18 +160,19 @@
 
 
 
-  <sectio class="max-w-[full] bg-gradient-to-b from-[#FBF8EE] to-[#FBEBF8] pt-10">
+  <section class="max-w-[full] bg-gradient-to-b from-[#FCEEF3] to-[#E7FCFD] pt-10">
 
     <!-- heading -->
     <div class="max-w-[1320px] mx-auto">
-      <h2 class="text-4xl pt-10 text-center font-semibold">Our <span class="text-red-400">Services</span></h2>
+      <h2 class="bg-gradient-custom bg-clip-text text-transparent text-4xl mt-4 text-center font-bold">Our Services
+      </h2>
     </div>
 
     <div
       class="max-w-[1320px]  mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 gap-6 py-[50px] md:px-6 sm:px-6 xs:px-6">
 
       <div
-        class="group bg-white text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i
           class="fa-solid fa-laptop-code fa-2xl pb-[30px] group-hover:text-white text-sky-500  animate-bounce w-6 h-6"></i>
         <h2 class="text-2xl font-bold pb-3">Web Development</h2>
@@ -156,7 +183,7 @@
           brand to thrive in the digital landscape. Partner with us today!</p>
       </div>
       <div
-        class="group text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i
           class="fa-solid fa-mobile-screen fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">App Development</h2>
@@ -169,7 +196,7 @@
 
 
       <div
-        class="group text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i
           class="fa-solid fa-building-columns fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Software Training Institute</h2>
@@ -181,19 +208,17 @@
       </div>
 
       <div
-        class="group text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i class="fa-solid fa-bullhorn fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Digital Marketing</h2>
-        <p class="xs:text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero tempora repellat
-          neque
-          commodi. Voluptatem,
-          voluptates?</p>
+        <p class="xs:text-justify">Unlock your brand's potential with our digital marketing services, driving
+          engagement, growth, and visibility online.</p>
       </div>
 
 
 
       <div
-        class="group text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i class="fa-solid fa-video fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Video Editing</h2>
         <p class="xs:text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero tempora repellat
@@ -203,18 +228,16 @@
       </div>
 
       <div
-        class="group text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i
           class="fa-solid fa-chart-pie fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
-        <h2 class="text-xl font-bold pb-2">Data Analysis</h2>
-        <p class="xs:text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero tempora repellat
-          neque
-          commodi. Voluptatem,
-          voluptates?</p>
+        <h2 class="text-xl font-bold pb-2">Website Maintainance</h2>
+        <p class="xs:text-justify">Ensure seamless performance and security with our comprehensive website management
+          services, tailored for your success.?</p>
       </div>
 
     </div>
-  </sectio>
+  </section>
 
   <section class="max-w-[full]  bg-[url('assets/images/bg.jpg')] object-cover bg-center bg-cover relative">
     <div class="w-[100%] backdrop-blur-md h-[100%] absolute left-0 top-0  z-0"></div>
@@ -231,10 +254,11 @@
     </div>
   </section>
 
-  <section class="bg-gradient-to-b from-[#E6FDFD] to-[#FDEEF3]  pt-10 pb-14">
+  <section class="bg-gradient-to-b from-[#E6FDFD] to-[#FDEEF3]  pt-8 pb-14">
     <div class="max-w-[1320px] mx-auto ">
-      <h2 class=" px-5 text-lg sm:text-2xl lg:text-3xl pt-4 text-center font-semibold">OUR <span
-          class="text-red-500">TOOLS &
+      <h2
+        class="bg-gradient-custom bg-clip-text text-transparent px-5 text-lg sm:text-2xl lg:text-3xl pt-4 pb-1 text-center font-bold">
+        OUR <span class="">TOOLS &
           TECHNOLOGIES
           STACK</span></h2>
       <p class="text-center px-6 text-sm sm:text-md  md:text-lg mx-auto mt-2 max-w-[800px] lg:w-[800px]">We
@@ -256,37 +280,44 @@
         <img src="assets/images/django.png" alt="" class="animate-bounce">
       </div>
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/js.png" alt="" class="animate-bounce">
-      </div>
-      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/tailwind1.png" alt="" class="animate-bounce">
-      </div>
-      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/reactjs.png" alt="" class="animate-bounce">
-
+        <img src="assets/images/nodejs.png" alt="" class="animate-bounce">
       </div>
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
         <img src="assets/images/mysql.png" alt="" class="animate-bounce">
-
       </div>
+      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
+        <img src="assets/images/postgre.png" alt="" class="animate-bounce">
+      </div>
+
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
         <img src="assets/images/html.png" alt="" class="animate-bounce">
       </div>
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
         <img src="assets/images/css-3.png" alt="" class="animate-bounce">
       </div>
+
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/postgre.png" alt="" class="animate-bounce">
+        <img src="assets/images/tailwind1.png" alt="" class="animate-bounce">
       </div>
-      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/figma.png" alt="" class="animate-bounce">
-      </div>
+
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
         <img src="assets/images/bootstrap.png" alt="" class="animate-bounce">
       </div>
+
       <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
-        <img src="assets/images/nodejs.png" alt="" class="animate-bounce">
+        <img src="assets/images/js.png" alt="" class="animate-bounce">
       </div>
+
+
+      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
+        <img src="assets/images/reactjs.png" alt="" class="animate-bounce">
+      </div>
+
+      <div class="bg-white shadow-md flex justify-center items-center rounded-md p-10">
+        <img src="assets/images/figma.png" alt="" class="animate-bounce">
+      </div>
+
+
     </div>
   </section>
 
