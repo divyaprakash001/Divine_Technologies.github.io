@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -47,8 +47,8 @@
 
 <body class="overflow-x-hidden">
 
-  <header
-    class="max-w-full max-h-[120px] h-[80px] bg-white flex grid-cols-2 px-10 py-2 justify-between lg:gap-6 sm:gap-4 items-center">
+  <header id="header"
+    class="max-w-full max-h-[120px] h-[80px] bg-[#EFF7F9] flex grid-cols-2 px-10 py-2 justify-between lg:gap-6 sm:gap-4 items-center">
     <div class="basis-[15%] xs:basis-[35%] sm:basis-[20%] md:basis-[11%] ">
       <a href="index.html"><img src="assets/images/divine tech logo.png" alt="Logo"></a>
     </div>
@@ -333,6 +333,21 @@
     </div> -->
   </footer>
 
+  <div id="scrollToTop" title="Go To Top"
+    class="cursor-pointer bg-sky-500 flex justify-center items-center p-6 text-white w-[40px] h-[40px] fixed bottom-6 right-6 z-20 animate-bounce">
+
+    <i class="fa-solid fa-arrow-up fa-2xl"></i>
+  </div>
+
+  <script>
+    document.getElementById('scrollToTop').addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
 
