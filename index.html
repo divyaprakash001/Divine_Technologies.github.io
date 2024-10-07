@@ -22,6 +22,7 @@
         extend: {
           animation: {
             'slow-bounce': 'bounce 1s infinite',
+            'fade-scale': 'fadescale 2s infinite',
           },
           backgroundImage: {
             'gradient-custom': 'linear-gradient(313deg, #ef4949, #dd4747, #0583d8, #0575c1)',
@@ -30,6 +31,10 @@
             bounce: {
               '0%, 100%': { transform: 'translateY(0)' },
               '50%': { transform: 'translateY(-0.25rem)' },
+            },
+            fadescale: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.1)', opacity: '1' },
             },
           },
           screens: {
@@ -66,6 +71,46 @@
     </div>
   </header>
 
+  <!-- <span id="responsive_navbar" class="absolute right-0 z-20 bg-slate-800 bg-opacity-80 w-[50%] sm:w-[40%] px-4 py-2 h-[550px] transition-transform duration-300"> -->
+  <span id="responsive_navbar"
+    class="absolute  right-0 z-20 bg-slate-800 hidden bg-opacity-80 w-[50%] sm:w-[40%] px-4 py-2 h-[550px] transform translate-x-full transition-transform duration-300">
+    <nav class="cursor-pointer">
+      <ul class="hidden xs:flex sm:flex flex flex-col justify-evenly items-center py-4 text-xl">
+        <li class="py-2 bg-sky-500 px-4 text-center text-white rounded-md mb-3 w-[100%] hover:border-b border-gray-300">
+          <a href="" class="">Home</a>
+        </li>
+        <li class="py-2 bg-sky-500 px-4 text-center text-white rounded-md mb-3 w-[100%] hover:border-b border-gray-300">
+          <a href="">About</a>
+        </li>
+        <li class="py-2 bg-sky-500 px-4 text-center text-white rounded-md mb-3 w-[100%] hover:border-b border-gray-300">
+          <a href="">Services</a>
+        </li>
+        <li class="py-2 bg-sky-500 px-4 text-center text-white rounded-md mb-3 w-[100%] hover:border-b border-gray-300">
+          <a href="">Products</a>
+        </li>
+        <li class="py-2 bg-sky-500 px-4 text-center text-white rounded-md mb-3 w-[100%] hover:border-b border-gray-300">
+          <a href="">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </span>
+
+
+  <span class="bg-white text-white fixed top-[270px] left-0 z-50 px-1  py-2 border rounded-r-md">
+    <div class="my-2 cursor-pointer transform transition-transform duration-300 hover:scale-125"><i
+        class="fa-brands fa-square-facebook fa-xl " style="color: #1693f3;"></i></div>
+    <div class="my-2 transform transition-transform duration-300 hover:scale-125 cursor-pointer"><i
+        class="fa-brands fa-instagram fa-xl" style="color: #c8466d;"></i></div>
+    <div class="my-2 transform transition-transform duration-300 hover:scale-125 cursor-pointer"><i
+        class="fa-brands fa-linkedin fa-xl" style="color: #2a65cb;"></i></i></div>
+    <div class="my-2 transform transition-transform duration-300 hover:scale-125 cursor-pointer"><i
+        class="fa-brands fa-youtube fa-lg" style="color: #ce121b;"></i></div>
+  </span>
+
+
+
+
+
 
 
 
@@ -86,7 +131,7 @@
 
 
 
-  <section class="max-w-full bg-gradient-to-b from-[#E6FDFD] to-[#FDEEF3] pt-10">
+  <section class="max-w-full relative bg-gradient-to-b from-[#E6FDFD] to-[#FDEEF3] pt-10 z-40">
     <div class="max-w-[1320px]  mx-auto   px-4 md:py-[30px] gap-6 flex lg:flex-row md:flex-col sm:flex-col xs:flex-col">
 
       <div class=" basis-[50%] px-5">
@@ -208,32 +253,40 @@
       </div>
 
       <div
-        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer hover:text-white">
         <i class="fa-solid fa-bullhorn fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Digital Marketing</h2>
-        <p class="xs:text-justify">Unlock your brand's potential with our digital marketing services, driving
-          engagement, growth, and visibility online.</p>
+        <p class="xs:text-justify">Elevate your business with our digital marketing services, expertly crafted to unlock
+          your brand's true potential. We focus on driving engagement, enhancing growth, and maximizing visibility
+          across online platforms. With targeted strategies and data-driven insights, we empower your brand to connect
+          with your audience and achieve lasting success in the digital realm.</p>
       </div>
 
 
 
       <div
-        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i class="fa-solid fa-video fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Video Editing</h2>
-        <p class="xs:text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero tempora repellat
-          neque
-          commodi. Voluptatem,
-          voluptates?</p>
+        <p class="xs:text-justify">Transform your raw footage into captivating visual stories with our professional
+          video editing services. We enhance your videos with seamless transitions, striking graphics, and engaging
+          sound design, ensuring your content resonates with your audience. Whether for marketing, events, or personal
+          projects, we bring your vision to life, making every frame count.</p>
       </div>
 
       <div
-        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
         <i
           class="fa-solid fa-chart-pie fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
         <h2 class="text-xl font-bold pb-2">Website Maintainance</h2>
-        <p class="xs:text-justify">Ensure seamless performance and security with our comprehensive website management
-          services, tailored for your success.?</p>
+        <p class="xs:text-justify">Ensure your website runs smoothly and stays relevant with our comprehensive website
+          maintenance services. We provide regular updates, security monitoring, and performance optimization to enhance
+          user experience and functionality. Let us handle the technical details, allowing you to focus on growing your
+          business while we keep your online presence secure and efficient.
+
+
+
+        </p>
       </div>
 
     </div>
@@ -254,7 +307,100 @@
     </div>
   </section>
 
-  <section class="bg-gradient-to-b from-[#E6FDFD] to-[#FDEEF3]  pt-8 pb-14">
+
+
+  <section class="max-w-[full] bg-gradient-to-b from-[#FCEEF3] to-[#FBEEF3] pt-10">
+
+    <!-- heading -->
+    <div class="max-w-[1320px] mx-auto ">
+      <h2
+        class="bg-gradient-custom bg-clip-text text-transparent px-5 text-lg sm:text-2xl lg:text-3xl pt-4 pb-1 text-center font-bold">
+        OUR <span class="">PORTFOLIO</span></h2>
+      <p class="text-center px-6 text-sm sm:text-md  md:text-lg mx-auto mt-2 max-w-[800px] lg:w-[800px]">Showcasing our
+        expertise in designing and developing innovative websites, applications, and mobile apps to drive your digital
+        success.</p>
+    </div>
+
+    <div
+      class="max-w-[1320px]  mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 gap-6 py-[50px] md:px-6 sm:px-6 xs:px-6">
+
+      <div
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        <i
+          class="fa-solid fa-laptop-code fa-2xl pb-[30px] group-hover:text-white text-sky-500  animate-bounce w-6 h-6"></i>
+        <h2 class="text-2xl font-bold pb-3">Web Development</h2>
+        <p class="xs:text-justify ">Our web development agency specializes in creating custom websites tailored to your
+          business needs.
+          With a focus on responsive design, seamless user experiences, and robust functionality, we deliver
+          high-quality solutions. Our expert team ensures optimized performance and ongoing support, empowering your
+          brand to thrive in the digital landscape. Partner with us today!</p>
+      </div>
+      <div
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        <i
+          class="fa-solid fa-mobile-screen fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
+        <h2 class="text-xl font-bold pb-2">App Development</h2>
+        <p class="xs:text-justify">Our app development agency creates innovative, user-friendly applications for both
+          iOS and Android
+          platforms. We prioritize seamless functionality, stunning design, and robust performance. From concept to
+          launch, our expert team collaborates closely with clients to deliver tailored solutions that meet business
+          goals. Let us help you bring your app idea to life!</p>
+      </div>
+
+
+      <div
+        class="group bg-white rounded-md text-center shadow-md p-6 py-8 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        <i
+          class="fa-solid fa-building-columns fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
+        <h2 class="text-xl font-bold pb-2">Software Training Institute</h2>
+        <p class="xs:text-justify">Our software training institute offers comprehensive courses designed to equip
+          individuals with
+          essential tech skills. With experienced instructors and hands-on training, we cover various topics, including
+          programming, web development, and data science. Our personalized approach ensures students gain practical
+          knowledge and confidence to excel in their careers. Join us to boost your expertise!</p>
+      </div>
+
+      <div
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer hover:text-white">
+        <i class="fa-solid fa-bullhorn fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
+        <h2 class="text-xl font-bold pb-2">Digital Marketing</h2>
+        <p class="xs:text-justify">Elevate your business with our digital marketing services, expertly crafted to unlock
+          your brand's true potential. We focus on driving engagement, enhancing growth, and maximizing visibility
+          across online platforms. With targeted strategies and data-driven insights, we empower your brand to connect
+          with your audience and achieve lasting success in the digital realm.</p>
+      </div>
+
+
+
+      <div
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        <i class="fa-solid fa-video fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
+        <h2 class="text-xl font-bold pb-2">Video Editing</h2>
+        <p class="xs:text-justify">Transform your raw footage into captivating visual stories with our professional
+          video editing services. We enhance your videos with seamless transitions, striking graphics, and engaging
+          sound design, ensuring your content resonates with your audience. Whether for marketing, events, or personal
+          projects, we bring your vision to life, making every frame count.</p>
+      </div>
+
+      <div
+        class="group bg-white rounded-md text-center shadow-md px-8 py-10 hover:bg-sky-600 duration-200 ease-in cursor-pointer  hover:text-white">
+        <i
+          class="fa-solid fa-chart-pie fa-2xl pb-[30px] group-hover:text-white text-sky-500 animate-bounce w-6 h-6"></i>
+        <h2 class="text-xl font-bold pb-2">Website Maintainance</h2>
+        <p class="xs:text-justify">Ensure your website runs smoothly and stays relevant with our comprehensive website
+          maintenance services. We provide regular updates, security monitoring, and performance optimization to enhance
+          user experience and functionality. Let us handle the technical details, allowing you to focus on growing your
+          business while we keep your online presence secure and efficient.
+
+
+
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-b from-[#FCEEF3] to-[#E6FDFD]  pt-8 pb-14">
     <div class="max-w-[1320px] mx-auto ">
       <h2
         class="bg-gradient-custom bg-clip-text text-transparent px-5 text-lg sm:text-2xl lg:text-3xl pt-4 pb-1 text-center font-bold">
@@ -334,10 +480,34 @@
   </footer>
 
   <div id="scrollToTop" title="Go To Top"
-    class="cursor-pointer bg-sky-500 flex justify-center items-center p-6 text-white w-[40px] h-[40px] fixed bottom-6 right-6 z-20 animate-bounce">
-
-    <i class="fa-solid fa-arrow-up fa-2xl"></i>
+    class="cursor-pointer bg-sky-500 flex justify-center items-center p-4 rounded-md md:p-6 text-white w-[40px] h-[40px] fixed bottom-6 right-6 z-50 animate-bounce">
+    <i class="fa-solid fa-arrow-up fa-xl md:fa-2xl"></i>
   </div>
+
+  <div id="scrollToTop" title="Go To Top"
+    class="cursor-pointer bg-white rounded-md flex justify-center items-center  p-4 rounded-md md:p-6 text-white w-[40px] h-[40px] fixed bottom-6 left-6 z-50 animate-fade-scale">
+    <i class="fa-brands fa-whatsapp fa-2xl text-green-300"></i>
+  </div>
+
+  <script>
+    const navbar = document.querySelector('#responsive_navbar');
+    const toggleButton = document.querySelector('.fa-bars');
+
+    toggleButton.addEventListener('click', () => {
+      // Toggle the transform class for sliding effect
+      if (navbar.classList.contains('translate-x-full')) {
+        navbar.classList.remove('translate-x-full');
+        navbar.classList.remove('hidden');
+        navbar.classList.add('translate-x-0'); // Slide in
+      } else {
+        navbar.classList.remove('translate-x-0');
+        navbar.classList.add('translate-x-full'); // Slide out
+      }
+    });
+
+
+
+  </script>
 
   <script>
     document.getElementById('scrollToTop').addEventListener('click', function (event) {
